@@ -1,4 +1,4 @@
-
+﻿
 import { useEffect, useState } from "react";
 import {
   Activity,
@@ -679,7 +679,7 @@ function App() {
           </div>
 
           <p className="mt-4 text-center text-[11px] text-slate-600">
-            CloudGuard • Project Dashboard
+            CloudGuard â€¢ Project Dashboard
           </p>
         </div>
       </aside>
@@ -730,9 +730,15 @@ function App() {
               <Bell size={19} />
             </div>
 
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 font-bold text-white">
+            <button
+              type="button"
+              onClick={() => navigate("prediction")}
+              title="View AI Failure Prediction"
+              aria-label="View AI Failure Prediction"
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 font-bold text-white transition hover:scale-105"
+            >
               AI
-            </div>
+            </button>
           </div>
         </header>
 
@@ -1428,7 +1434,7 @@ function App() {
                     Manual simulation recorded
                   </p>
                   <p className="mt-1 text-xs">
-                    {healing.service} — {healing.status}
+                    {healing.service} â€” {healing.status}
                   </p>
                 </div>
               </div>
@@ -1617,18 +1623,20 @@ function App() {
           {/* Footer */}
           <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-800 pt-6 text-xs text-slate-500">
             <p>
-              CloudGuard AI — Cloud Failure Prediction &
+              CloudGuard AI â€” Cloud Failure Prediction &
               Self-Healing System
             </p>
             <p>
-              Real Docker Monitoring & Recovery •
-              Synthetic AI Training • AI Healing Simulation
+              Real Docker Monitoring & Recovery â€¢
+              Synthetic AI Training â€¢ AI Healing Simulation
             </p>
           </footer>
         </main>
       </div>
     </div>
+    
   );
 }
 
 export default App;
+
