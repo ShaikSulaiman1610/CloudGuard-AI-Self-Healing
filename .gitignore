@@ -1,0 +1,50 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+*@'
+# Python Virtual Environment
+venv/
+.venv/
+env/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Node.js Dependencies
+node_modules/
+
+# Environment Variables and Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local Healing History
+backend/healing_logs.json
+
+# Build Files
+frontend/dist/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# VS Code Settings
+.vscode/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Local Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary Files
+*.tmp
+*.temp
+'@ | Set-Content -Path ".gitignore" -Encoding UTF8
