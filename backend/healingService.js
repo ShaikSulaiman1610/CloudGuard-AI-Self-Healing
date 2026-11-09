@@ -8,8 +8,9 @@ const execFileAsync = promisify(execFile);
 
 const LOG_FILE = path.join(__dirname, "healing_logs.json");
 
-const DOCKER_PATH =
-  "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe";
+const DOCKER_PATH = process.platform === "win32"
+  ? "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe"
+  : "docker";
 
 const DEMO_CONTAINER = "cloudguard-demo";
 

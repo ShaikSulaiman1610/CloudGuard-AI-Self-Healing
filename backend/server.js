@@ -27,8 +27,9 @@ const execFileAsync = promisify(execFile);
 
 const DEMO_CONTAINER = "cloudguard-demo";
 
-const DOCKER_PATH =
-  "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe";
+const DOCKER_PATH = process.platform === "win32"
+  ? "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe"
+  : "/usr/bin/docker";
 
 const DOCKER_CHECK_INTERVAL_MS = 10000;
 const DOCKER_RECOVERY_COOLDOWN_MS = 30000;

@@ -1,4 +1,3 @@
-﻿
 import { useEffect, useState } from "react";
 import {
   Activity,
@@ -23,7 +22,7 @@ import {
   Container,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "/api";
 const MAX_POINTS = 24;
 
 function formatTime(value) {

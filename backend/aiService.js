@@ -7,8 +7,9 @@ const projectRoot = path.join(__dirname, "..");
 const pythonPath = path.join(
   projectRoot,
   "venv",
-  "Scripts",
-  "python.exe"
+  ...(process.platform === "win32"
+    ? ["Scripts", "python.exe"]
+    : ["bin", "python"])
 );
 
 const predictionScript = path.join(
